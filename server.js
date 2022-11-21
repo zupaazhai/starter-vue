@@ -16,10 +16,9 @@ var options = {
 }
 app.use(express.static('dist', options))
 
-const path = require('path');
 app.get('*', (req, res) => {
   res.sendFile(
-      path.resolve(__dirname, 'build', 'index.html')
+      path.resolve(__dirname, 'dist', 'index.html')
   );
 });
 
